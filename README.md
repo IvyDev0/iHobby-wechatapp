@@ -6,12 +6,20 @@
 
 **11.17，周四**
 
-- 按照图纸完成整体的大致[配置](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html?t=20161107)
-- 完成图纸上的样子（就是画出来吧啊哈
-- [视图层](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/?t=20161107)：yiyi ——首页；ziyi——第二页
+
+- [x] 按照图纸完成整体的大致[配置](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html?t=20161107)
 
 **11.18，周五**
 
-- 继续视图层，添加[事件](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html?t=20161107)
+- [ ] 继续[视图层](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/?t=20161107)，添加[事件](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html?t=20161107)
+
+      - [ ] yiyi——1“热门”
+      - [ ] ziyi——“5我的”
 
 
+
+**11.19，周六**
+
+- [ ] 完善1“热门”，5“我的”的事件
+- [ ] 2“信息”的视图
+- [ ] 3“发布”

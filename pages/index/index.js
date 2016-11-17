@@ -15,7 +15,7 @@ Page({
   },
   bindQueTap: function() {
     wx.navigateTo({
-      url: '../question/question'
+      url: '../user/question'
     })
   },
   onLoad: function () {
@@ -45,9 +45,6 @@ Page({
     var index_api = '';
     util.getData(index_api)
         .then(function(data){
-          //this.setData({
-          //
-          //});
           console.log(data);
         });
   },
@@ -73,6 +70,4 @@ Page({
       feed_length: this.data.feed_length + next_data.length
     });
   }
-
-
 })
