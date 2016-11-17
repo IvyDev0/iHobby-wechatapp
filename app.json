@@ -26,7 +26,7 @@
       "iconPath": "images/tabbar/remen.png",
       "selectedIconPath": "images/tabbar/remen.png"
     }, {
-      "pagePath": "pages/fabu/fabu",
+      "pagePath": "pages/xinxi/xinxi",
       "text": "信息",
       "iconPath":"images/tabbar/xinxi.png",
       "selectedIconPath": "images/tabbar/xinxi.png"
