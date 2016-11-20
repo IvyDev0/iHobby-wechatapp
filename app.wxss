@@ -122,6 +122,3 @@
   padding: 0 10rpx 0 0;
   font-size: 24rpx;
 }
-.container .feed-item .feed-content .answer-actions .dot ::after{
-  content: "•";
-}
