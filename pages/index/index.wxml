@@ -28,7 +28,7 @@
                             <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/zhuanfa.png"></image>
                             <text>{{item.comment_num}}   </text>
                         </view>
-                        <view class="dot">
+                        <view class="dot" bindtap="pinglun">
                             <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
                             <a>{{item.comment_num}} 评论 </a>
                         </view>

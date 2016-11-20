@@ -9,10 +9,16 @@ Page({
   },
   //事件处理函数
   // 点击”分享“
-  bindItemTap: function() {
+  fenxiang: function() {
     wx.navigateTo({
       url: '../share/share'
     })
+  },
+  dianzan: function() {
+
+  },
+  pinglun:function() {
+
   },
  
   onLoad: function () {
