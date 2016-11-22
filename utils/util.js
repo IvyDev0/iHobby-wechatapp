@@ -21,18 +21,16 @@ module.exports = {
 };
 
 var index = require('../data/data_index.js')
-var index_next = require('../data/data_index_next.js')
-var discovery = require('../data/data_discovery.js')
-var discovery_next = require('../data/data_discovery_next.js')
+//var index_next = require('../data/data_index_next.js')
+//var discovery = require('../data/data_discovery.js')
+//var discovery_next = require('../data/data_discovery_next.js')
 
 function getData(url){
   return new Promise(function(resolve, reject){
     wx.request({
       url: url,
       data: {},
-      header: {
-        //'Content-Type': 'application/json'
-      },
+      header: {},
       success: function(res) {
         console.log("success")
         resolve(res)
@@ -50,25 +48,11 @@ function getData2(){
 }
 
 function getNext(){
-  return index_next.next;
+  // 直接返回index，不用之前的index_next
+  return index.index;
 }
-
-function getDiscovery(){
-  return discovery.discovery;
-}
-
-function discoveryNext(){
-  return discovery_next.next;
-}
-
 
 
 module.exports.getData = getData;
 module.exports.getData2 = getData2;
 module.exports.getNext = getNext;
-module.exports.getDiscovery = getDiscovery;
-module.exports.discoveryNext = discoveryNext;
-
-
-
-
