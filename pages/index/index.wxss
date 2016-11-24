@@ -12,8 +12,6 @@
   background: #F0F4F3;
 }
 
-
-
 /**------feed的样式------**/
 .container .feed-item{
   width: 690rpx;
@@ -83,28 +81,15 @@
   vertical-align: text-bottom;
   padding: 0 10rpx 0 0;
   font-size: 24rpx;
+  height: 2.3em;
+  line-height: 2.3em;
+  text-align: center;
+  margin: 5px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
-
-.weui-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-}
-.weui-flex__item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-}
-
-.placeholder{
-    background-color: #EBEBEB;
-    height: 2.3em;
-    line-height: 2.3em;
-    text-align: center;
-    margin: 5px;
-    color: #cfcfcf;
+.container .feed-item .feed-actions view image{
+  width: 20px; 
+  height: 20px;
 }

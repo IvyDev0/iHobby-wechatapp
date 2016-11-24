@@ -14,16 +14,16 @@
                 </view>
             </view>
             <view class="feed-actions"><!--底部：分享、评论、点赞--> 
-                <view bindtap="fenxiang">
-                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/zhuanfa.png"></image>
+                <view bindtap="dianzan">
+                    <image  mode="aspectFit" src="{{feedlike}}"></image>
                     <text>{{item.share_num}}</text>
                 </view>
                 <view bindtap="pinglun">
-                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
+                    <image mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
                     <text>{{item.comment_num}}</text>
                  </view>
-                  <view bindtap="dianzan">
-                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/zan.png"></image>                        
+                  <view bindtap="fenxiang">
+                    <image mode="aspectFit" src="../../../images/feed/fx3.png"></image>                        
                     <text>{{item.like_num}}</text>
                 </view>
             </view>

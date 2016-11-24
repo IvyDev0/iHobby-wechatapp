@@ -6,7 +6,8 @@ var app = getApp()
 Page({
   data: {
     feed: [],
-    feed_length: 0
+    feed_length: 0,
+    feedlike:"../../../images/feed/zan.png",
   },
   //事件处理函数
   // 点击”分享“、“评论”、“点赞”
@@ -14,11 +15,14 @@ Page({
    
   },
   dianzan: function() {
+    this.setData({
+      feedlike:"../../../images/feed/zan1.png",
+    })
     // 弹出toast
     wx.showToast({
-      title: '已赞！可在“我的”-“已赞”中查看或进行预订！',
+      title: '已赞!'+'\n\n'+'可在“我的”-“已赞”中查看或进行预订！',// TODO: 怎么换行
       icon: 'success',
-      duration: 2000
+      duration: 1500
     })
   },
   pinglun:function() {
