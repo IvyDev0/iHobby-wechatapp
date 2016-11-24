@@ -13,12 +13,12 @@
 
 - [ ] 继续[视图层](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/?t=20161107)，添加[事件](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html?t=20161107)
 
-      - [ ] yiyi——1“热门”
+      - [x] yiyi——1“热门”
       - [ ] ziyi——“5我的”
 
 
 
-**11.19，周六**
+**11.24，周四**
 
 - [ ] 完善1“热门”，5“我的”的事件
 - [ ] 2“信息”的视图

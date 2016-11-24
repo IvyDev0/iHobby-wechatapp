@@ -1,6 +1,7 @@
 //index.js
 
 var util = require('../../utils/util.js')
+
 var app = getApp()
 Page({
   data: {
@@ -8,13 +9,24 @@ Page({
     feed_length: 0
   },
   //事件处理函数
-  // 点击”分享“
-  bindItemTap: function() {
-    wx.navigateTo({
-      url: '../share/share'
+  // 点击”分享“、“评论”、“点赞”
+  fenxiang: function() {
+   
+  },
+  dianzan: function() {
+    // 弹出toast
+    wx.showToast({
+      title: '已赞！可在“我的”-“已赞”中查看或进行预订！',
+      icon: 'success',
+      duration: 2000
     })
   },
- 
+  pinglun:function() {
+    
+  },
+  seeuser:function() {
+    //wx.navigateTo({ })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -35,13 +47,11 @@ Page({
   },
   
   //网络请求数据, 实现首页刷新
+  // ？？哪里？？
   refresh0: function(){
     var index_api = '';
     util.getData(index_api)
         .then(function(data){
-          //this.setData({
-          //
-          //});
           console.log(data);
         });
   },
@@ -49,7 +59,7 @@ Page({
   //使用本地 fake 数据实现刷新效果
   refresh: function(){
     var feed = util.getData2();
-    console.log("loaddata");
+    console.log("load data");
     var feed_data = feed.data;
     this.setData({
       feed:feed_data,
@@ -60,7 +70,7 @@ Page({
   //使用本地 fake 数据实现继续加载效果
   nextLoad: function(){
     var next = util.getNext();
-    console.log("continueload");
+    console.log("continue load");
     var next_data = next.data;
     this.setData({
       feed: this.data.feed.concat(next_data),
