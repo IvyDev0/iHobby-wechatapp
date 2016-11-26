@@ -23,7 +23,7 @@
                     <text>    {{item.comment_num}}</text>
                  </view>
                   <view bindtap="fenxiang">
-                    <image mode="aspectFit" src="../../../images/feed/fx3.png"></image>                        
+                    <image mode="aspectFit" src="../../../images/feed/fx.png"></image>                        
                     <text>   {{item.share_num}}</text>
                 </view>
             </view>

@@ -12,6 +12,14 @@ Page({
   fenxiang: function() {
    
   },
+  pinglun:function() {
+    wx.navigateTo({
+      url: 'detail/detail'
+    })
+  },
+  seeuser:function() {
+    //wx.navigateTo({ })
+  },
   dianzan: function(e) {
     // 对应num+1
     var feed = util.getData();
@@ -28,12 +36,7 @@ Page({
       duration: 1500
     })
   },
-  pinglun:function() {
-    
-  },
-  seeuser:function() {
-    //wx.navigateTo({ })
-  },
+
   onPullDownRefresh: function() {
     // Do something when pull down.
     console.log('刷新');
