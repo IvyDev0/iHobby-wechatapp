@@ -5,14 +5,13 @@
     "pages/xinxi/xinxi",
     "pages/fabu/fabu",
     "pages/paihang/paihang",
-    "pages/wode/wode",
-    "pages/user/user"
+    "pages/wode/wode"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "iHobby",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle":"white",
     "enablePullDownRefresh":true
   },
   "tabBar": {

@@ -38,6 +38,7 @@
 .container .feed-item .feed-head .feed-head-name{
   display: inline-block;
   height: 40rpx;
+  width: 200rpx;
   padding-left: 2px;
   vertical-align:40rpx;
   margin: 0 0 0 10rpx;
@@ -45,9 +46,9 @@
   font-size: 26rpx;
 }
 .container .feed-item .feed-head .feed-head-time{
-  height: 40rpx;
-  vertical-align:text-bottom;
-  margin-left:-52rpx;
+  display: inline-block;
+  height: 20rpx;
+  margin-left: -202rpx;
   color: #a0acac;
   font-size: 22rpx;
 }
