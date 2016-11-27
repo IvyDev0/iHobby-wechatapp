@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/index/detail/detail",
     "pages/wode/wode",
+    "pages/index/detail/detail",   
     "pages/logs/logs",
     "pages/xinxi/xinxi",
     "pages/fabu/fabu",
