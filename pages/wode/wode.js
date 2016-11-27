@@ -1,5 +1,4 @@
 var app = getApp()
-var util = require('../../utils/util.js')
 
 Page( {
   data: {
@@ -18,18 +17,18 @@ Page( {
       }, {
         icon: '../../images/wode/dingdan.png',
         text: '订单'
+      }, {
+        icon: '../../images/wodd/wenti.png',
+        text: '问题'
       }]
   },
   onLoad: function() {
     var that = this
-    var feed = util.getData();
-    var feed_data = feed.list;
     //调用应用实例的方法获取全局数据
     app.getUserInfo( function( userInfo ) {
       //更新数据
       that.setData( {
-      userInfo: userInfo,
-       feed:feed_data
+      userInfo: userInfo
     })
 
   })

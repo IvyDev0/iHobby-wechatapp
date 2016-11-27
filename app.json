@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/wode/wode",
+    "pages/index/detail/detail",   
     "pages/logs/logs",
     "pages/utils/util",
     "pages/index/pinglun/pinglun"
