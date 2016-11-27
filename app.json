@@ -4,10 +4,8 @@
     "pages/wode/wode",
     "pages/index/detail/detail",   
     "pages/logs/logs",
-    "pages/xinxi/xinxi",
-    "pages/fabu/fabu",
-    "pages/paihang/paihang",
-    "pages/logs/logs"
+    "pages/utils/util",
+    "pages/index/pinglun/pinglun"
   ],
   "window":{
     "backgroundTextStyle":"light",

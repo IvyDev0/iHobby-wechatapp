@@ -45,12 +45,7 @@ Page({
   },
   onReachBottom: function() {
     // Do something when page reach bottom.
-     console.log('circle 下一页');
-     wx.showToast({
-      title: 'lower',
-      icon: 'success',
-      duration: 1500
-    })
+    console.log('circle 下一页');
     var that = this;
     setTimeout(function(){wx.hideNavigationBarLoading();that.nextLoad();}, 1000);
   },
