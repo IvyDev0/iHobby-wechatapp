@@ -19,4 +19,34 @@
         </view>
     </block>
   </view>
+  
+  <view class="feed-item">
+            <view class="feed-head"><!--头部：用户头像、名称、发布时间-->  
+                <image class="feed-head-avatar" src="../../images/local/user3.jpeg"></image>
+                <text class="feed-head-name">木棉</text>
+                <text class="feed-head-time">今天 10：56</text>
+            </view>
+            <view class="feed-content"><!--内容：文字、图片-->
+                <text class="feed-content-text" bindtap="seedetail">心理，唯爱伊</text>
+                <view class="feed-content-post">
+                    <image mode="aspectFit" bindtap="seephoto" src="../../images/local/d3.png"></image>
+                </view>
+            </view>
+            <view class="feed-actions"><!--底部：分享、评论、点赞--> 
+                <view bindtap="fenxiang">
+                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/zhuanfa.png"></image>
+                    <text>10</text>
+                </view>
+                <view bindtap="pinglun">
+                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
+                    <text>18</text>
+                 </view>
+                  <view bindtap="dianzan">
+                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/zan.png"></image>                        
+                    <text>112</text>
+                </view>
+            </view>
+        </view>
+
+
 </view>
