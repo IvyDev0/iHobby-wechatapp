@@ -11,10 +11,10 @@
 
 **11.18，周五**
 
-- [ ] 继续[视图层](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/?t=20161107)，添加[事件](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html?t=20161107)
+- [x] 继续[视图层](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/?t=20161107)，添加[事件](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/event.html?t=20161107)
 
       - [x] yiyi——1“热门”
-      - [ ] ziyi——“5我的”
+      - [x] ziyi——“5我的”
 
 
 
@@ -29,5 +29,8 @@
 **11.27，周日**
 
 - [x] “评论”的界面（仿LinkedIn），通过wx.navigateTo 带值跳转
-- [ ] 2“信息”的视图
-- [ ] 3“发布”
+- [x] 2“信息”的视图
+- [x] 3“发布”
+
+**12.1，周四**
+- [ ] "发布"之后的页面
