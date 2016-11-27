@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/wode/wode",
     "pages/logs/logs",
     "pages/xinxi/xinxi",
     "pages/fabu/fabu",
     "pages/paihang/paihang",
-    "pages/wode/wode",
     "pages/user/user"
+  
   ],
   "window":{
     "backgroundTextStyle":"light",
