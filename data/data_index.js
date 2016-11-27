@@ -22,7 +22,7 @@ var index= {
         },
         {
            "feed_id": 2,
-            "feed_user_name": "nikkon",
+            "feed_user_name": "nickon",
             "feed_user_icon": "../../images/local/user2.jpeg",
             "feed_time": "今天  10:56",
             "feed_text": "Keep calm and study psycology.",

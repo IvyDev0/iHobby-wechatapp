@@ -8,7 +8,7 @@
   background: #F0F4F3;
 }
 .userinfo {
- 
+  align-items: center;
   display: flex;
   flex-direction: column;
   padding: 50rpx 0;
@@ -22,13 +22,16 @@
 }
 .userinfo-nickname {
   color: #333;
-  font-size: 32rpx;
+  font-size: 33rpx;
 }
+
 .weui_cell{
     position: relative;
+    flex-direction: row;
+    left: 0;
     display: flex;
     padding: 15px;
-
+    align-items:left;
     border-bottom: 1px solid #dadada;
 }
 .weui_cell_hd{
@@ -42,7 +45,6 @@
   vertical-align: -2px;
 }
 .weui_cell_bd{
-  display: inline-block;
 }
 .weui_cell_bd_p{
   font-size: 14px;
@@ -71,6 +73,18 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+.abody
+{
+  position: relative;
+    flex-direction: row;
+    left: 0;
+    display: flex;
+    padding: 15px;
+    align-items:left;
+    border-bottom: 1px solid #dadada;
+}
+
 
 
 /**------对发布的帖子的feed的样式------**/
@@ -128,6 +142,7 @@
   max-height: 250rpx;
   margin: 10rpx 5rpx 5rpx -200rpx;
 }
+
 /**---底部---**/
 .container .feed-item .feed-actions {
   width: 690rpx;
@@ -142,8 +157,15 @@
   vertical-align: text-bottom;
   padding: 0 10rpx 0 0;
   font-size: 24rpx;
+  height: 2.3em;
+  line-height: 2.3em;
+  text-align: center;
+  margin: 5px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
+.container .feed-item .feed-actions view image{
+  width: 20px; 
+  height: 20px;
+}
