@@ -26,11 +26,4 @@ function getData(){
   return index.index;
 }
 
-function getNext(){
-  // 直接返回index，不用之前的index_next?
-  return index.index;
-}
-
-
 module.exports.getData = getData;
-module.exports.getNext = getNext;

@@ -1,0 +1,29 @@
+<scroll-view  class="container" scroll-y="true">
+    <view class="feed-item">
+        <view class="feed-head"><!--头部：用户头像、名称、发布时间-->  
+            <image class="feed-head-avatar" src="{{feed_user_icon}}"></image>
+            <text class="feed-head-name">{{feed_user_name}}</text>
+            <text class="feed-head-time">{{feed_time}}</text>
+        </view>
+        <view class="feed-content"><!--内容：文字、图片-->
+            <text class="feed-content-text" bindtap="seedetail">{{feed_text}}</text>
+            <view class="feed-content-post">
+                <image mode="aspectFit" bindtap="seephoto" src="{{feed_post}}"></image>
+            </view>
+        </view>
+        <view class="feed-actions"><!--底部：分享、评论、点赞--> 
+            <view id="{{feedid}}" bindtap="dianzan">
+                <image  mode="aspectFit" src="{{ifliked ? 'zan1.png':'zan0.png'}}"></image>
+                <text>  {{ifliked}}</text>
+            </view>
+            <view bindtap="pinglun">
+                <image mode="aspectFit" src="../../../../images/feed/pinglun.png"></image>
+                <text>    {{comment_num}}</text>
+             </view>
+              <view bindtap="fenxiang">
+                <image mode="aspectFit" src="../../../../images/feed/fx.png"></image>                        
+                <text>   {{share_num}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

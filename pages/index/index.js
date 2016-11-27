@@ -1,8 +1,8 @@
 //index.js
 
 var util = require('../../utils/util.js')
-
 var app = getApp()
+
 Page({
   data: {
     feed: []
@@ -12,10 +12,16 @@ Page({
   fenxiang: function() {
    
   },
-  pinglun:function() {
+  pinglun:function(e) {
+    var feed = util.getData(),feed_data = feed.list;
+    var feedid = e.currentTarget.id;
+    var ifliked = feed_data[feedid-1].ifliked;
     wx.navigateTo({
-      url: 'detail/detail'
+      // 传值给详细页面：feed的id号、是否点了评论、是否点过赞
+      url: 'pinglun/pinglun?feedid='+feedid+'&showinput=true'+'&ifliked='+ifliked
     })
+    console.log('----'+ifliked);
+
   },
   seeuser:function() {
     //wx.navigateTo({ })
@@ -52,14 +58,13 @@ Page({
 
   onLoad: function () {
     console.log('onLoad')
-    var that = this
     //调用应用实例的方法获取全局数据
     this.refresh();
   },
   //使用本地 fake 数据实现刷新效果
   refresh: function(){
+    console.log("load data"); 
     var feed = util.getData();
-    console.log("load data");
     var feed_data = feed.list;
     this.setData({
       feed:feed_data,
@@ -68,7 +73,7 @@ Page({
 
   //使用本地 fake 数据实现继续加载效果
   nextLoad: function(){
-    var next = util.getNext();
+    var next = util.getData();
     console.log("continue load");
     var next_data = next.list;
     this.setData({
