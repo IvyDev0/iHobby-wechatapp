@@ -19,34 +19,39 @@
         </view>
     </block>
   </view>
+
+
+
+
   
-  <view class="feed-item">
+   <block wx:for="{{feed}}" wx:key="{{item.feed_id}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+        <view class="feed-item">
             <view class="feed-head"><!--头部：用户头像、名称、发布时间-->  
-                <image class="feed-head-avatar" src="../../images/local/user2.jpeg"></image>
-                <text class="feed-head-name">nickon</text>
-                <text class="feed-head-time">今天 10：56</text>
+                <image class="feed-head-avatar" src="{{item.feed_user_icon}}"></image>
+                <text class="feed-head-name">{{item.feed_user_name}}</text>
+                <text class="feed-head-time">{{item.feed_time}}</text>
             </view>
             <view class="feed-content"><!--内容：文字、图片-->
-                <text class="feed-content-text" bindtap="seedetail">keep calm and study psychology</text>
+                <text class="feed-content-text" bindtap="seedetail">{{item.feed_text}}</text>
                 <view class="feed-content-post">
-                    <image mode="aspectFit" bindtap="seephoto" src="../../images/local/d3.png"></image>
+                    <image mode="aspectFit" bindtap="seephoto" src="{{item.feed_post}}"></image>
                 </view>
             </view>
             <view class="feed-actions"><!--底部：分享、评论、点赞--> 
-                <view bindtap="fenxiang">
-                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/fx.png"></image>
-                    <text>10</text>
+                <view id="{{item.feed_id}}" bindtap="dianzan">
+                    <image  mode="aspectFit" src="{{item.ifliked ? '../../../images/feed/zan1.png':'../../../images/feed/zan.png'}}"></image>
+                    <text>  {{item.like_num}}</text>
                 </view>
                 <view bindtap="pinglun">
-                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
-                    <text>18</text>
+                    <image mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
+                    <text>    {{item.comment_num}}</text>
                  </view>
-                  <view bindtap="dianzan">
-                    <image style="width: 15px; height: 15px;background-color: #ffffff;" mode="aspectFit" src="../../../images/feed/zan.png"></image>                        
-                    <text>112</text>
+                  <view bindtap="fenxiang">
+                    <image mode="aspectFit" src="../../../images/feed/fx.png"></image>                        
+                    <text>   {{item.share_num}}</text>
                 </view>
             </view>
         </view>
-
+    </block>
 
 </view>
