@@ -1,5 +1,5 @@
 
-@import "../../weui.wxss";
+@import "../weui.wxss";
 
 .container {
   height: 100%;
@@ -67,6 +67,16 @@
   max-height: 250rpx;
   margin: 10rpx 5rpx 5rpx -200rpx;
 }
+.container .feed-item .feed-content .feed-content-tag{
+  display: inline-block;
+  padding-top: 25rpx;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  color: cornflowerblue;
+}
+
 /**---底部---**/
 .container .feed-item .feed-actions {
   width: 690rpx;
@@ -92,4 +102,53 @@
 .container .feed-item .feed-actions view image{
   width: 20px; 
   height: 20px;
+}
+.container .feed-item .feed-likes{
+  left: 10rpx;
+  height: 70rpx;
+}
+.container .feed-item .feed-likes image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 5rpx;   
+  margin-left: 5rpx;
+}
+
+.container .weui-media-box .head{
+  width: 690rpx;
+  left: 10rpx;
+  height: 70rpx;
+}
+.container .weui-media-box .head .avatar{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0rpx;
+  border-radius: 50%;
+}
+.container .weui-media-box .head .name{
+  display: inline-block;
+  height: 40rpx;
+  width: 200rpx;
+  padding-left: 2px;
+  vertical-align:40rpx;
+  margin: 0 0 0 10rpx;
+  color: #000;
+  font-size: 26rpx;
+}
+.container .weui-media-box .head .time{
+  display: inline-block;
+  height: 20rpx;
+  margin-left: -202rpx;
+  color: #a0acac;
+  font-size: 22rpx;
+}
+
+.container .weui-media-box .comm-content-text{
+  display: inline-block;
+  padding-top: 25rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
 }

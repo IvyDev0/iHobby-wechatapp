@@ -18,10 +18,8 @@ Page({
     var ifliked = feed_data[feedid-1].ifliked;
     wx.navigateTo({
       // 传值给详细页面：feed的id号、是否点了评论、是否点过赞
-      url: 'pinglun/pinglun?feedid='+feedid+'&showinput=true'+'&ifliked='+ifliked
+      url: '../pinglun/pinglun?feedid='+feedid+'&showinput=true'+'&ifliked='+ifliked
     })
-    console.log('----'+ifliked);
-
   },
   seeuser:function() {
     //wx.navigateTo({ })
@@ -61,6 +59,7 @@ Page({
     //调用应用实例的方法获取全局数据
     this.refresh();
   },
+
   //使用本地 fake 数据实现刷新效果
   refresh: function(){
     console.log("load data"); 
@@ -70,7 +69,6 @@ Page({
       feed:feed_data,
     });
   },
-
   //使用本地 fake 数据实现继续加载效果
   nextLoad: function(){
     var next = util.getData();

@@ -9,6 +9,7 @@
             </view>
             <view class="feed-content"><!--内容：文字、图片-->
                 <text class="feed-content-text" bindtap="seedetail">{{item.feed_text}}</text>
+                <text class="feed-content-tag"> #{{item.feed_majtag}}# #{{item.feed_typtag}}#</text>
                 <view class="feed-content-post">
                     <image mode="aspectFit" bindtap="seephoto" src="{{item.feed_post}}"></image>
                 </view>

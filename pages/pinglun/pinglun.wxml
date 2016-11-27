@@ -1,0 +1,49 @@
+<scroll-view  class="container" scroll-y="true">
+    <view class="feed-item">
+        <view class="feed-head"><!--头部：用户头像、名称、发布时间-->  
+            <image class="feed-head-avatar" src="{{feed.feed_user_icon}}"></image>
+            <text class="feed-head-name">{{feed.feed_user_name}}</text>
+            <text class="feed-head-time">{{feed.feed_time}}</text>
+        </view>
+        <view class="feed-content"><!--内容：文字、图片-->
+            <text class="feed-content-text" bindtap="seedetail">{{feed_text}}</text>
+            <text class="feed-content-tag"> #{{feed.feed_majtag}}# #{{feed.feed_typtag}}#</text>
+            <view class="feed-content-post">
+                <image mode="aspectFit" bindtap="seephoto" src="{{feed.feed_post}}"></image>
+            </view>
+        </view>
+        <view class="feed-actions"><!--底部：分享、评论、点赞--> 
+            <view id="{{feed.feed_id}}" bindtap="dianzan">
+                <image  mode="aspectFit" src="{{feed.ifliked ? 'zan1.png' : 'zan.png'}}"></image>
+                <text>  {{feed.like_num}}</text><!--这里有问题--> 
+            </view>
+            <view bindtap="pinglun">
+                <image mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
+                <text>    {{feed.comment_num}}</text>
+             </view>
+              <view bindtap="fenxiang">
+                <image mode="aspectFit" src="../../../images/feed/fx.png"></image>                        
+                <text>   {{feed.share_num}}</text>
+            </view>
+        </view>
+        <!--likes-->
+        <view class="feed-likes">
+            <block wx:for="{{feed.comments}}" wx:key="{{item.comm_id}}">
+                <image class="feed-likes-icons" src="{{item.comm_icon}}"></image>
+            </block>
+        </view>
+    </view>
+
+    <!--评论-->  
+    <block wx:for="{{feed.comments}}" wx:key="{{item.comm_id}}">
+        <view class="weui-media-box">
+            <view class="head"><!--头部：用户头像、名称、发布时间-->  
+                <image class="avatar" src="{{item.comm_icon}}"></image>
+                <text class="name">{{item.comm_name}}</text>
+                <text class="time">{{item.comm_time}}</text>
+            </view>
+            <text class="comm-content-text">{{item.comm_text}}</text>
+        </view>    
+    </block>
+</scroll-view>
+<input id="myInput" bindchange="bindChange" />

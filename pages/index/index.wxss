@@ -64,6 +64,15 @@
   font-weight: 600px;
   line-height: 40rpx;
 }
+.container .feed-item .feed-content .feed-content-tag{
+  display: inline-block;
+  padding-top: 25rpx;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  color: cornflowerblue;
+}
 .container .feed-item .feed-content .feed-content-post image{
   max-height: 250rpx;
   margin: 10rpx 5rpx 5rpx -200rpx;

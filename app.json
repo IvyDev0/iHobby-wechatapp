@@ -2,9 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/wode/wode",
+    "pages/xinxi/xinxi",
     "pages/logs/logs",
     "pages/utils/util",
-    "pages/index/pinglun/pinglun"
+    "pages/pinglun/pinglun"
   ],
   "window":{
     "backgroundTextStyle":"light",
