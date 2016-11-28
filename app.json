@@ -5,7 +5,8 @@
     "pages/xinxi/xinxi",
     "pages/logs/logs",
     "pages/utils/util",
-    "pages/pinglun/pinglun"
+    "pages/pinglun/pinglun",
+    "pages/fabu/fabu"
   ],
   "window":{
     "backgroundTextStyle":"light",

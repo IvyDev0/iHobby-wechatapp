@@ -15,7 +15,7 @@
         <view class="feed-actions"><!--底部：分享、评论、点赞--> 
             <view id="{{feed.feed_id}}" bindtap="dianzan">
                 <image  mode="aspectFit" src="{{feed.ifliked ? 'zan1.png' : 'zan.png'}}"></image>
-                <text>  {{feed.like_num}}</text><!--这里有问题--> 
+                <text>  {{feed.like_num}}</text>
             </view>
             <view bindtap="pinglun">
                 <image mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
@@ -33,7 +33,6 @@
             </block>
         </view>
     </view>
-
     <!--评论-->  
     <block wx:for="{{feed.comments}}" wx:key="{{item.comm_id}}">
         <view class="weui-media-box">
@@ -46,4 +45,6 @@
         </view>    
     </block>
 </scroll-view>
-<input id="myInput" bindchange="bindChange" />
+<view class="addcomment">
+  <input id="myInput"  bindinput="bindKeyInput" placeholder="评论"  placeholder-style="font-size:14px;padding-left:7px;" auto-focus/>
+</view>

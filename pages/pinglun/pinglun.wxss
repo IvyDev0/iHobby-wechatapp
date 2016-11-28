@@ -152,3 +152,12 @@
   font-weight: 600px;
   line-height: 40rpx;
 }
+
+.addcomment{
+  margin: 0 15rpx 5rpx 15rpx;
+}
+
+.addcomment .shouqi{
+  width: 50rpx;
+  height: 30rpx;
+}
