@@ -30,10 +30,7 @@ Page( {
       that.setData( {
       userInfo: userInfo,
        feed:feed_data
+      })
     })
-
-  })
   }
-
 })
-

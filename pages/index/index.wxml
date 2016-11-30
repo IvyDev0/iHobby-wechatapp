@@ -35,3 +35,8 @@
             <view class="weui-loadmore__tips">正在加载</view>
     </view>
 </scroll-view>
+<action-sheet hidden="{{!showActionsSheet}}" bindchange="hideActionSheet">
+    <action-sheet-item bindtap="downloadImage">保存到本地</action-sheet-item>
+    <action-sheet-item class="warn" bindtap="deleteImage">删除图片</action-sheet-item>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

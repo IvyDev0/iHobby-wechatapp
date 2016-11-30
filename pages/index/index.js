@@ -5,12 +5,20 @@ var app = getApp()
 
 Page({
   data: {
-    feed: []
+    feed: [],
+    showActionsSheet: false
   },
   //事件处理函数
   // 点击”分享“、“评论”、“点赞”
   fenxiang: function() {
-   
+   this.setData({ 
+     showActionsSheet: true
+   })
+  },
+  hideActionSheet() {
+    this.setData({ 
+      showActionsSheet: false
+    });
   },
   pinglun:function(e) {
     var feed = util.getData(),feed_data = feed.list;
