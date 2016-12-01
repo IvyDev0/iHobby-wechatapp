@@ -7,6 +7,7 @@
     "pages/utils/util",
     "pages/pinglun/pinglun",
     "pages/fabu/fabu",
+    "pages/fabu/fabu2/fabu2",
     "pages/paihang/paihang"
   ],
   "window":{

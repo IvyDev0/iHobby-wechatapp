@@ -3,7 +3,7 @@
         <view class="item-group" wx:for="{{layoutList}}" wx:for-item="group">
             <block wx:for="{{group}}" wx:for-item="item">
                 <block wx:if="{{item}}">
-                    <image bindtap="enterPreviewMode" bindlongtap="showActions" data-src="{{item}}" class="album-item" src="{{item}}" mode="aspectFill"></image>
+                    <image bindtap="mark" bindlongtap="showActions" class="album-item" src="{{item}}" mode="aspectFill"></image>
                 </block>
                 <block wx:else>
                     <view class="album-item empty"></view>
@@ -16,6 +16,13 @@
         <text>拍照</text>
     </view>
 </scroll-view>
+
+<button type="default" size="mini" plain="true" disabled="{{buttondisabled}}" bindtap="enterPreviewMode">
+预览 {{previewNum}}
+</button>
+<button type="primary" size="mini" disabled="{{buttondisabled}}" bindtap="confirm">
+确定
+</button>
 
 <swiper class="swiper-container" duration="400" current="{{previewIndex}}" bindtap="leavePreviewMode" style="display: {{previewMode ? 'block' : 'none'}};">
   <block wx:for="{{albumList}}" wx:for-item="item">

@@ -16,7 +16,7 @@ Page({
             "../../../images/local/d4.png", 
             "../../../images/local/d1.png" 
         ],
-        buttondisabled:true,
+        buttondisabled:false,
         source:'',
         // 图片布局列表（二维数组，由`albumList`计算而得）
         layoutList: [],
