@@ -44,8 +44,17 @@
 }
 
 
-
 .textinput {
   font-size: 14px;
   margin: 0 15rpx 5rpx 15rpx;
+}
+
+.tagcontent {
+  display: inline-block;
+  padding-top: 10rpx;
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  color: cornflowerblue;
 }

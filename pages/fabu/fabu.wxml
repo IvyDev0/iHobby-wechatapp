@@ -1,9 +1,9 @@
 <scroll-view class="container" scroll-y="true" style="display: {{!preview ? 'block' : 'none'}};">
     <view class="album-container">
         <view class="item-group" wx:for="{{layoutList}}" wx:for-item="group">
-            <block wx:for="{{group}}" wx:for-item="item">
+            <block wx:for="{{group}}" wx:for-item="item" wx:for-index="idx">
                 <block wx:if="{{item}}">
-                    <image bindtap="mark" bindlongtap="showActions" class="album-item" src="{{item}}" mode="aspectFill"></image>
+                    <image id="{{idx}}" bindtap="mark" class="album-item" src="{{item}}" mode="aspectFill"></image>
                 </block>
                 <block wx:else>
                     <view class="album-item empty"></view>

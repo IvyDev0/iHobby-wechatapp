@@ -99,7 +99,37 @@ var index= {
                 "comm_icon": "../../images/local/user1.jpeg",
                 "comm_time": "今天  11:00",
                 "comm_text": "嘿嘿嘿😝"
-            }]
+            }],
+        "albumList": [
+            {
+                "id":1,
+                "img":"../../../images/local/d1.png"
+            },
+            {
+                "id":2,
+                "img":"../../../images/local/d2.png"
+            },
+            {
+                "id":3,
+                "img":"../../../images/local/d3.png"
+            },
+            {
+                "id":4,
+                "img":"../../../images/local/d4.png"
+            },
+            {
+                "id":5,
+                "img":"../../../images/local/d5.png"
+            },
+            {
+                "id":6,
+                "img":"../../../images/local/d6.png"
+            },
+            {
+                "id":7,
+                "img":"../../../images/local/d1.png"
+            }          
+        ],
         }
     ]
 }

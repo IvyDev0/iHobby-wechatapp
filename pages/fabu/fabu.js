@@ -104,16 +104,20 @@ Page({
         this.setData({ layoutList });
     },
     mark(event) {
-        var num = this.data.previewNum;
-        var selected = this.data.selectedImg;
-        let imageUrl = event.target.dataset.src;
-        let previewIndex = this.data.albumList.indexOf(imageUrl);
+        var num = this.data.previewNum
+        var previewIndex = event.target.id
+        var image = this.data.albumList[previewIndex]
+        var selected_data=this.selected
+        //selected_data[0].id = previewIndex
+        //selected_data[0].img = image
+        console.log('IMAGES-----> '+image)
         this.setData({
             buttondisabled:false,
             previewIndex: previewIndex,
             previewNum: num+1, 
-            selectedImg: selected.concat(this.data.albumList[previewIndex])
+            selectedImg: this.data.selectedImg.concat(image)
         })
+        console.log('IMAGES-----> '+'1：'+this.data.selectedImg)
     },
 
     modalTap: function() {
@@ -124,14 +128,15 @@ Page({
     // 添加水印-“是”
     modalConfirm: function() {
         wx.navigateTo({
-          url: 'fabu_sy/fabu_sy',
+          url: 'fabu_sy/fabu_sy?imageList='+selectedImg
         })
     },
     // 添加水印-“否”
     modalCancel: function() {
         var selectedImg = this.data.selectedImg;
+        console.log('IMAGES-----> '+selectedImg)
         wx.navigateTo({
-          url: 'fabu2/fabu2?imageList='+selectedImg,
+          url: 'fabu2/fabu2?imageList='+selectedImg
         })
     },
 

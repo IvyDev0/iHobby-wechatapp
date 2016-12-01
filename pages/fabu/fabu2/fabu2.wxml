@@ -1,18 +1,24 @@
-
-
 <view class="textinput">
   <input placeholder="写下你此刻的心情..... " placeholder-style="font-size:14px;padding-left:7px;" auto-focus/>
 </view>
 
+<button disabled="{{!tag}}" type="primary" size="mini" bindtap="send" style="margin:20px auto  auto  10px;">
+  发布
+</button>
 <button type="primary" size="mini" bindtap="choosetag" style="margin:20px auto  auto  10px;">
   选择标签
 </button>
+<view class="tagcontent"  wx:if="{{tag}}">
+  <text>#{{Majortag}}# #{{Typetag}}#</text>
+</view>
+
+
 
 <view class="images-wrapper">
   <text class="images-text">请选择图片</text>
   <view class="images-list">
-    <block wx:for="{{imageList}}" wx:for-item="image">
-      <image src="{{image}}" class="images-image" bindtap="previewImage"></image>
+    <block wx:for="{{imageList}}" wx:for-index="idx">
+      <image src="{{imageList[idx]}}" class="images-image" bindtap="previewImage"></image>
     </block>
     <view class="images-image image-plus" bindtap="chooseImage">
       <view class="image-plus-horizontal"></view>

@@ -37,7 +37,7 @@
       "iconPath":"images/tabbar/xinxi0.png",
       "selectedIconPath": "images/tabbar/xinxi.png"
     }, {
-      "pagePath": "pages/fabu/fabu2/fabu_tag/fabu_tag",
+      "pagePath": "pages/fabu/fabu",
       "text": "发布",
       "iconPath":"images/tabbar/fabu.png",
       "selectedIconPath": "images/tabbar/fabu.png"

@@ -1,7 +1,9 @@
+var app = getApp()
+
 Page({
   data:{
     majorchoose:false,
-    ifchoose:false,
+    typechoose:false,
     
     major:[{
           "id":1,
@@ -47,20 +49,30 @@ Page({
   choosemajor(e) {
       var id = e.currentTarget.id
       var major = this.data.major
-      // 一个for循环判断其他的ifchoose
+      for (var i = 0; i < major.length; ++i) {
+          major[i].ifchoose = false;      
+      }
       major[id-1].ifchoose = true;
+      var ins = getApp()
+      ins.data.Majortag = major[id-1].name
       this.setData({
-          major: major
+          major: major,
+          majorchoose: id
       })
   },
   choosetype(e) {
     var id = e.currentTarget.id
     var protype = this.data.protype
-    protype[id-1].ifchoose = true;name
-    console.log(protype[id-1].ifchoose);
+    for (var i = 0; i < protype.length; ++i) {
+          protype[i].ifchoose = false;      
+    }
+    protype[id-1].ifchoose = true;
+    var ins = getApp()
+    ins.data.Typetag = protype[id-1].name
 
     this.setData({
-        protype: protype
+        protype: protype,
+        typechoose: id
     })
   },
 
@@ -69,19 +81,11 @@ Page({
         url: '../addtag/addtag'
     })
   },
+
   confirmtag() {
-      wx.navigateBack({
-        delta: 1, // 回退前 delta(默认为1) 页面
-        success: function(res){
-          // success
-          // 传值
-        },
-        fail: function() {
-          // fail
-        },
-        complete: function() {
-          // complete
-        }
-      })
+    var ins = getApp()
+    ins.data.Confirmtag = true
+    console.log(getApp().data.Typetag+' '+getApp().data.Majortag+'  '+ins.data.Confirmtag);
+    wx.navigateBack({})
   }
 })
