@@ -49,7 +49,7 @@ page{
     line-height: 2.3em;
     text-align: center;
     margin: 5px;
-    color: #cfcfcf;
+    color: #888888;
     font-family:fantasy;
    
 }
