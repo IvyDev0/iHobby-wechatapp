@@ -4,14 +4,14 @@
     </view>
     <view class="page__bd page__bd_spacing">
         <view class="weui-flex">
-            <block wx:for="{{major}}">
+            <block wx:for="{{major}}" wx:key="{{item.id}}">
                 <view class="weui-flex__item  placeholder">
-                    <button style="vertical-align:center" type="{{ifchoose}}" size="mini" bindtap="choosetag">{{item}}</button>
+                    <button id="{{item.id}}" style="vertical-align:center" type="{{item.ifchoose ? 'primary':'default'}}" size="mini" bindtap="choosemajor">{{item.name}}</button>
                 </view>
             </block>
         </view>
     </view>
-    <button type="primary" size="mini" style="margin-top:10px;margin-left:20px;" bindtap="addtag">
+    <button type="primary" size="mini" style="margin-top:10px;margin-left:20px;" bindtap="addmajortag">
         添加
     </button>
 
@@ -20,20 +20,20 @@
     </view>
     <view class="page__bd page__bd_spacing">
          <view class="weui-flex">
-            <block wx:for="{{protype}}">
+             <block wx:for="{{protype}}" wx:key="{{item.id}}">
                 <view class="weui-flex__item  placeholder">
-                    <button style="vertical-align:center" type="{{ifchoose}}" size="mini" bindtap="choosetag">{{item}}</button>
+                    <button id="{{item.id}}" style="vertical-align:center" type="{{item.ifchoose ? 'primary':'default'}}" size="mini" bindtap="choosetype">{{item.name}}</button>
                 </view>
             </block>
         </view>   
     </view>
-    <button type="primary" size="mini" style="margin-top:10px;margin-left:20px;"  bindtap="addtag">
+    <button type="primary" size="mini" style="margin-top:10px;margin-left:20px;"  bindtap="addtypetag">
         添加
     </button>
 </view>
 
     
 
-<button type="primary" size="mini" style="margin-top:10px;margin-left:20px;" disabled="{{!(majorchoose&&typechoose)}}" bindtap="choosetag">
+<button type="primary" size="mini" style="margin-top:10px;margin-left:20px;" disabled="{{!(majorchoose&&typechoose)}}" bindtap="confirmtag">
     确定
 </button>

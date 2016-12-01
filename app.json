@@ -10,7 +10,8 @@
     "pages/fabu/fabu2/fabu2",
     "pages/fabu/fabu_sy/fabu_sy",
     "pages/paihang/paihang",
-    "pages/fabu/fabu2/fabu_tag/fabu_tag"
+    "pages/fabu/fabu2/fabu_tag/fabu_tag",
+    "pages/fabu/fabu2/addtag/addtag"
   ],
   "window":{
     "navigationBarBackgroundColor": "#ffffff",

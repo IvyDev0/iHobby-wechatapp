@@ -129,9 +129,7 @@ Page({
     },
     // 添加水印-“否”
     modalCancel: function() {
-        this.setData({
-            modalHidden: true
-        }),
+        var selectedImg = this.data.selectedImg;
         wx.navigateTo({
           url: 'fabu2/fabu2?imageList='+selectedImg,
         })
