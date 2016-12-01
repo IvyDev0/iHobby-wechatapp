@@ -1,16 +1,21 @@
-const config = require('../../config.js');
 const { listToMatrix, always } = require('../../lib/util.js');
-const request = require('../../lib/request.js');
-const api = require('../../lib/api.js');
 
 Page({
     data: {
         // 相册列表数据
-        albumList: [],
-
+        albumList: [
+            "../../../images/local/d1.png", 
+            "../../../images/local/d2.png",
+            "../../../images/local/d3.png", 
+            "../../../images/local/d4.png", 
+            "../../../images/local/d5.png", 
+            "../../../images/local/d6.png", 
+            "../../../images/local/d3.png", 
+            "../../../images/local/d4.png", 
+            "../../../images/local/d1.png" 
+        ],
         // 图片布局列表（二维数组，由`albumList`计算而得）
         layoutList: [],
-
         // 布局列数
         layoutColumnSize: 3,
 
@@ -65,26 +70,13 @@ Page({
     },
 
     onLoad() {
+        wx.showToast({
+            title: '加载本地相册…',
+            icon: 'loading',
+            duration: 1000
+        }),
         this.renderAlbumList();
-
-        this.getAlbumList().then((resp) => {
-            if (resp.code !== 0) {
-                // 图片列表加载失败
-                return;
-            }
-
-            this.setData({ 'albumList': this.data.albumList.concat(resp.data) });
-            this.renderAlbumList();
-        });
     },
-
-    // 获取相册列表
-    getAlbumList() {
-        this.showLoading('加载列表中…');
-        setTimeout(() => this.hideLoading(), 1000);
-        return request({ method: 'GET', url: api.getUrl('/list') });
-    },
-
     // 渲染相册列表
     renderAlbumList() {
         let layoutColumnSize = this.data.layoutColumnSize;
@@ -92,14 +84,12 @@ Page({
 
         if (this.data.albumList.length) {
             layoutList = listToMatrix([0].concat(this.data.albumList), layoutColumnSize);
-
             let lastRow = layoutList[layoutList.length - 1];
             if (lastRow.length < layoutColumnSize) {
                 let supplement = Array(layoutColumnSize - lastRow.length).fill(0);
                 lastRow.push(...supplement);
             }
         }
-
         this.setData({ layoutList });
     },
 
@@ -170,78 +160,6 @@ Page({
     // 显示可操作命令
     showActions(event) {
         this.setData({ showActionsSheet: true, imageInAction: event.target.dataset.src });
-    },
+    }
 
-    // 下载图片
-    downloadImage() {
-        this.showLoading('正在保存图片…');
-        console.log('download_image_url', this.data.imageInAction);
-
-        wx.downloadFile({
-            url: this.data.imageInAction,
-            type: 'image',
-            success: (resp) => {
-                wx.saveFile({
-                    tempFilePath: resp.tempFilePath,
-                    success: (resp) => {
-                        this.showToast('图片保存成功');
-                    },
-
-                    fail: (resp) => {
-                        console.log('fail', resp);
-                    },
-
-                    complete: (resp) => {
-                        console.log('complete', resp);
-                        this.hideLoading();
-                    },
-                });
-            },
-
-            fail: (resp) => {
-                console.log('fail', resp);
-            },
-        });
-
-        this.setData({ showActionsSheet: false, imageInAction: '' });
-    },
-
-    // 删除图片
-    deleteImage() {
-        let imageUrl = this.data.imageInAction;
-        let filepath = '/' + imageUrl.split('/').slice(3).join('/');
-
-        this.showLoading('正在删除图片…');
-        this.setData({ showActionsSheet: false, imageInAction: '' });
-
-        request({
-            method: 'POST',
-            url: api.getUrl('/delete'),
-            data: { filepath },
-        })
-        .then((resp) => {
-            if (resp.code !== 0) {
-                // 图片删除失败
-                return;
-            }
-
-            // 从图片列表中移除
-            let index = this.data.albumList.indexOf(imageUrl);
-            if (~index) {
-                let albumList = this.data.albumList;
-                albumList.splice(index, 1);
-
-                this.setData({ albumList });
-                this.renderAlbumList();
-            }
-
-            this.showToast('图片删除成功');
-        })
-        .catch(error => {
-            console.log('failed', error);
-        })
-        .then(() => {
-            this.hideLoading();
-        });
-    },
 });

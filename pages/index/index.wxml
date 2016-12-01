@@ -22,8 +22,8 @@
                 <view id="{{item.feed_id}}" bindtap="pinglun">
                     <image mode="aspectFit" src="../../../images/feed/pinglun.png"></image>
                     <text>    {{item.comment_num}}</text>
-                 </view>
-                  <view bindtap="fenxiang">
+                </view>
+                <view bindtap="fenxiang">
                     <image mode="aspectFit" src="../../../images/feed/fx.png"></image>                        
                     <text>   {{item.share_num}}</text>
                 </view>
@@ -36,7 +36,8 @@
     </view>
 </scroll-view>
 <action-sheet hidden="{{!showActionsSheet}}" bindchange="hideActionSheet">
-    <action-sheet-item bindtap="downloadImage">保存到本地</action-sheet-item>
-    <action-sheet-item class="warn" bindtap="deleteImage">删除图片</action-sheet-item>
+    <block wx:for="{{actionSheetItems}}">
+        <action-sheet-item class="item" bindtap="bind{{item}}">{{item}}</action-sheet-item>
+    </block>
     <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
 </action-sheet>

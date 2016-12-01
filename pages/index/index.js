@@ -6,7 +6,12 @@ var app = getApp()
 Page({
   data: {
     feed: [],
-    showActionsSheet: false
+    showActionsSheet: false,
+    actionSheetItems:[
+      "转发到微信",
+      "分享到朋友圈",
+      "收藏"
+    ]
   },
   //事件处理函数
   // 点击”分享“、“评论”、“点赞”

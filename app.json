@@ -6,13 +6,15 @@
     "pages/logs/logs",
     "pages/utils/util",
     "pages/pinglun/pinglun",
-    "pages/fabu/fabu"
+    "pages/fabu/fabu",
+    "pages/paihang/paihang"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "iHobby",
-    "navigationBarTextStyle":"white",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
     "enablePullDownRefresh":true
   },
   "tabBar": {
