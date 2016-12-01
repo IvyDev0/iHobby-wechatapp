@@ -1,0 +1,39 @@
+<view class="page">
+    <view class="pagehead1">
+        <text>选择专业标签</text>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <block wx:for="{{major}}">
+                <view class="weui-flex__item  placeholder">
+                    <button style="vertical-align:center" type="{{ifchoose}}" size="mini" bindtap="choosetag">{{item}}</button>
+                </view>
+            </block>
+        </view>
+    </view>
+    <button type="primary" size="mini" style="margin-top:10px;margin-left:20px;" bindtap="addtag">
+        添加
+    </button>
+
+    <view class="pagehead2">
+        <text>选择类型标签</text>
+    </view>
+    <view class="page__bd page__bd_spacing">
+         <view class="weui-flex">
+            <block wx:for="{{protype}}">
+                <view class="weui-flex__item  placeholder">
+                    <button style="vertical-align:center" type="{{ifchoose}}" size="mini" bindtap="choosetag">{{item}}</button>
+                </view>
+            </block>
+        </view>   
+    </view>
+    <button type="primary" size="mini" style="margin-top:10px;margin-left:20px;"  bindtap="addtag">
+        添加
+    </button>
+</view>
+
+    
+
+<button type="primary" size="mini" style="margin-top:10px;margin-left:20px;" disabled="{{!(majorchoose&&typechoose)}}" bindtap="choosetag">
+    确定
+</button>

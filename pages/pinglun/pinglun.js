@@ -15,12 +15,13 @@ Page({
     var id = e.feedid;
     var f = util.getData();
     var feed_data = f.list;
+    var that=this;
     this.setData({
       feed: feed_data[id-1]
     });
     app.getUserInfo( function( userInfo ) {
       that.setData( {
-      userInfo: userInfo
+        userInfo: userInfo
       })
     })
   },

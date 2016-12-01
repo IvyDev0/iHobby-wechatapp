@@ -8,7 +8,9 @@
     "pages/pinglun/pinglun",
     "pages/fabu/fabu",
     "pages/fabu/fabu2/fabu2",
-    "pages/paihang/paihang"
+    "pages/fabu/fabu_sy/fabu_sy",
+    "pages/paihang/paihang",
+    "pages/fabu/fabu2/fabu_tag/fabu_tag"
   ],
   "window":{
     "navigationBarBackgroundColor": "#ffffff",
@@ -34,7 +36,7 @@
       "iconPath":"images/tabbar/xinxi0.png",
       "selectedIconPath": "images/tabbar/xinxi.png"
     }, {
-      "pagePath": "pages/fabu/fabu",
+      "pagePath": "pages/fabu/fabu2/fabu_tag/fabu_tag",
       "text": "发布",
       "iconPath":"images/tabbar/fabu.png",
       "selectedIconPath": "images/tabbar/fabu.png"

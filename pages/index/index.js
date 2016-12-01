@@ -31,7 +31,7 @@ Page({
     var ifliked = feed_data[feedid-1].ifliked;
     wx.navigateTo({
       // 传值给详细页面：feed的id号、是否点了评论、是否点过赞
-      url: '../pinglun/pinglun?feedid='+feedid+'&showinput=true'+'&ifliked='+ifliked
+      url: '../pinglun/pinglun?feedid='+feedid
     })
   },
   seeuser:function() {

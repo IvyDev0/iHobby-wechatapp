@@ -20,9 +20,13 @@
 <button type="default" size="mini" plain="true" disabled="{{buttondisabled}}" bindtap="enterPreviewMode">
 预览 {{previewNum}}
 </button>
-<button type="primary" size="mini" disabled="{{buttondisabled}}" bindtap="confirm">
+<button type="primary" size="mini" disabled="{{buttondisabled}}" bindtap="modalTap">
 确定
 </button>
+
+<modal title="" confirm-text="是" cancel-text="否" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
+是否添加水印？
+</modal>
 
 <swiper class="swiper-container" duration="400" current="{{previewIndex}}" bindtap="leavePreviewMode" style="display: {{previewMode ? 'block' : 'none'}};">
   <block wx:for="{{albumList}}" wx:for-item="item">

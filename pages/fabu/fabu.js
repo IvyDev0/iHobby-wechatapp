@@ -17,6 +17,7 @@ Page({
             "../../../images/local/d1.png" 
         ],
         buttondisabled:true,
+        modalHidden:true,
         source:'',
         // 图片布局列表（二维数组，由`albumList`计算而得）
         layoutList: [],
@@ -45,6 +46,8 @@ Page({
         previewMode: false,
 
         previewNum: 0,
+
+        selectedImg:[],
 
         // 当前预览索引
         previewIndex: 0,
@@ -79,7 +82,7 @@ Page({
       wx.showToast({
           title: '加载本地相册…',
           icon: 'loading',
-          duration: 2000
+          duration: 1000
       }),
       this.renderAlbumList();
       this.chooseImage();
@@ -101,27 +104,39 @@ Page({
         this.setData({ layoutList });
     },
     mark(event) {
+        var num = this.data.previewNum;
+        var selected = this.data.selectedImg;
         let imageUrl = event.target.dataset.src;
         let previewIndex = this.data.albumList.indexOf(imageUrl);
         this.setData({
-            buttondisabled:true,
-            previewIndex: previewIndex
+            buttondisabled:false,
+            previewIndex: previewIndex,
+            previewNum: num+1, 
+            selectedImg: selected.concat(this.data.albumList[previewIndex])
         })
     },
-    confirm(){
+
+    modalTap: function() {
+        this.setData({
+            modalHidden: false
+        })
+    },
+    // 添加水印-“是”
+    modalConfirm: function() {
         wx.navigateTo({
-          url: 'fabu2/fabu2',
-          success: function(res){
-            // success
-          },
-          fail: function() {
-            // fail
-          },
-          complete: function() {
-            // complete
-          }
+          url: 'fabu_sy/fabu_sy',
         })
     },
+    // 添加水印-“否”
+    modalCancel: function() {
+        this.setData({
+            modalHidden: true
+        }),
+        wx.navigateTo({
+          url: 'fabu2/fabu2?imageList='+selectedImg,
+        })
+    },
+
 
     // 从相册选择照片或拍摄照片
     chooseImage() {

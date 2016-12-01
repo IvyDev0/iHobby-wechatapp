@@ -1,5 +1,5 @@
 
-@import "../weui.wxss";
+@import "../../lib/common/weui.wxss";
 
 .container {
   height: 100%;
@@ -155,9 +155,4 @@
 
 .addcomment{
   margin: 0 15rpx 5rpx 15rpx;
-}
-
-.addcomment .shouqi{
-  width: 50rpx;
-  height: 30rpx;
 }
