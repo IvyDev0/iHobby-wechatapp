@@ -52,27 +52,5 @@ Page({
 
   onLoad: function () {
     console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    this.refresh();
-  },
-  //使用本地 fake 数据实现刷新效果
-  refresh: function(){
-    var feed = util.getData();
-    console.log("load data");
-    var feed_data = feed.list;
-    this.setData({
-      feed:feed_data,
-    });
-  },
-
-  //使用本地 fake 数据实现继续加载效果
-  nextLoad: function(){
-    var next = util.getNext();
-    console.log("continue load");
-    var next_data = next.list;
-    this.setData({
-      feed: this.data.feed.concat(next_data),
-    });
   }
 })
