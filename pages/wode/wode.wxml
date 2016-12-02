@@ -20,10 +20,7 @@
     </block>
 </view>
 
-
-
-
-  <block wx:for="{{feed}}" wx:if="{{item.feed_id==2}}" wx:key="{{item.feed_id}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+  <block wx:for="{{feed}}" wx:if="{{item.feed_id==3}}" wx:key="{{item.feed_id}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
         <view class="feed-item">
             <view class="feed-head"><!--头部：用户头像、名称、发布时间-->  
                 <image class="feed-head-avatar" src="{{item.feed_user_icon}}"></image>

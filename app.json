@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/wode/wode",
     "pages/xinxi/xinxi",
+    "pages/xinxi/morebiaoqian",
     "pages/logs/logs",
     "pages/utils/util",
     "pages/pinglun/pinglun",

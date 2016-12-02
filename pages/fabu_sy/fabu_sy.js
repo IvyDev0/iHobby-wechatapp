@@ -5,7 +5,7 @@ Page({
     },
     modalTap: function() {
         wx.navigateTo({
-          url: '../fabu2/fabu2'
+          url: '../fabu_content/fabu_content'
         })
     }
 });

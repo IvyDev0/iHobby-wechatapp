@@ -6,7 +6,7 @@ page{
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
 }
 .page__hd {
-    padding: 40px;
+    padding: 20px;
 }
 .page__bd {
     padding-bottom: 40px;
@@ -17,8 +17,9 @@ page{
 }
 
 .page__ft{
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-align: center;
+    font-weight:400;
 }
 
 .page__title {
@@ -35,7 +36,8 @@ page{
 }
 
 .section{
-    margin-bottom: 80rpx;
+    margin-top:30px;
+    margin-bottom: 30rpx;
 }
 .section_gap{
     padding: 0 30rpx;
@@ -55,5 +57,5 @@ page{
 
 .picker{
   padding: 26rpx;
-  background-color: #FFFFFF;
+  background-color: #F8F8F8;
 }

@@ -24,4 +24,6 @@ Page({
             inputVal: e.detail.value
         });
     }
+
+    
 });

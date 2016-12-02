@@ -60,11 +60,8 @@
 
 
     <view class="button-sp-area">
-    <button class="weui-btn" type="primary" >选择更多标签</button>
+    <navigator url="morebiaoqian?title=morebiaoqian" hover-class="none">
+    <button class="weui-btn-area" type="default" >选择更多标签</button>
+      </navigator>
     </view>
-
-
-
-
-
 </view>
