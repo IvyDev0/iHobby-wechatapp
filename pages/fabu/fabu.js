@@ -1,3 +1,8 @@
+//  page/fabu/fabu.js
+//
+//  等配好服务器后，数据应该是：
+//  手机本地 -> 发布页面，渲发布页面中需要渲染图片，即可，目前此页多余。
+
 const { listToMatrix, always } = require('../../lib/util.js');
 const request = require('../../lib/request.js');
 const api = require('../../lib/api.js');
@@ -16,9 +21,10 @@ Page({
             "../../../images/local/d4.png", 
             "../../../images/local/d1.png" 
         ],
+        // 按键  modal提示
         buttondisabled:true,
         modalHidden:true,
-        source:'',
+        selectedImg:[],
         // 图片布局列表（二维数组，由`albumList`计算而得）
         layoutList: [],
         // 布局列数
@@ -46,8 +52,6 @@ Page({
         previewMode: false,
 
         previewNum: 0,
-
-        selectedImg:[],
 
         // 当前预览索引
         previewIndex: 0,
@@ -86,7 +90,6 @@ Page({
       }),
       this.renderAlbumList();
       this.chooseImage();
-
     },
     // 渲染相册列表
     renderAlbumList() {
@@ -103,21 +106,21 @@ Page({
         }
         this.setData({ layoutList });
     },
+
+
+
     mark(event) {
-        var num = this.data.previewNum
         var previewIndex = event.target.id
         var image = this.data.albumList[previewIndex]
-        var selected_data=this.selected
-        //selected_data[0].id = previewIndex
-        //selected_data[0].img = image
-        console.log('IMAGES-----> '+image)
+        console.log('mark-----> '+image)
+
         this.setData({
             buttondisabled:false,
             previewIndex: previewIndex,
-            previewNum: num+1, 
-            selectedImg: this.data.selectedImg.concat(image)
+            previewNum: this.data.previewNum+1, 
+            //selectedImg: this.data.selectedImg.unshift(image)
         })
-        console.log('IMAGES-----> '+'1：'+this.data.selectedImg)
+        //console.log('selectedImg NOW-----> '+this.data.selectedImg.length)
     },
 
     modalTap: function() {
@@ -128,15 +131,16 @@ Page({
     // 添加水印-“是”
     modalConfirm: function() {
         wx.navigateTo({
-          url: 'fabu_sy/fabu_sy?imageList='+selectedImg
+          url: '../fabu_sy/fabu_sy?imageList='+this.data.selectedImg
         })
     },
     // 添加水印-“否”
     modalCancel: function() {
-        var selectedImg = this.data.selectedImg;
-        console.log('IMAGES-----> '+selectedImg)
+        var selectedImg = this.data.selectedImg
+        console.log('selectedImg-----> '+selectedImg)
+
         wx.navigateTo({
-          url: 'fabu2/fabu2?imageList='+selectedImg
+          url: '../fabu_content/fabu_content?imageList='+this.data.selectedImg
         })
     },
 

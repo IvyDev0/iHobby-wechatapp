@@ -25,7 +25,7 @@ App({
       })
     }
   },
-  data:{
+  globalData:{
     userInfo:null,
     Confirmtag: false,
     Majortag:'',

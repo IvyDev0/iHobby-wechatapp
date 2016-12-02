@@ -7,11 +7,11 @@
     "pages/utils/util",
     "pages/pinglun/pinglun",
     "pages/fabu/fabu",
-    "pages/fabu/fabu2/fabu2",
-    "pages/fabu/fabu_sy/fabu_sy",
+    "pages/fabu_content/fabu_content",
+    "pages/fabu_sy/fabu_sy",
     "pages/paihang/paihang",
-    "pages/fabu/fabu2/fabu_tag/fabu_tag",
-    "pages/fabu/fabu2/addtag/addtag"
+    "pages/fabu_content_tag/fabu_content_tag",
+    "pages/fabu_content_tag_add/fabu_content_tag_add"
   ],
   "window":{
     "navigationBarBackgroundColor": "#ffffff",

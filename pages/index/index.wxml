@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <scroll-view  class="container" scroll-y="true" upper-threshold="5" lower-threshold="5">
-    <block wx:for="{{feed}}" wx:key="{{item.feed_id}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <block wx:for="{{feed}}" wx:key="{{item.feed_id}}" wx:for-index="idx" wx:for-item="item" wx:key="{{idx}}">
         <view class="feed-item">
             <view class="feed-head"><!--头部：用户头像、名称、发布时间-->  
                 <image class="feed-head-avatar" src="{{item.feed_user_icon}}"></image>
@@ -36,7 +36,7 @@
     </view>
 </scroll-view>
 <action-sheet hidden="{{!showActionsSheet}}" bindchange="hideActionSheet">
-    <block wx:for="{{actionSheetItems}}">
+    <block wx:for="{{actionSheetItems}}" wx:key="*this">
         <action-sheet-item class="item" bindtap="bind{{item}}">{{item}}</action-sheet-item>
     </block>
     <action-sheet-cancel class="cancel">取消</action-sheet-cancel>

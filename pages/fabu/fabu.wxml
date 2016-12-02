@@ -1,8 +1,8 @@
 <scroll-view class="container" scroll-y="true" style="display: {{!preview ? 'block' : 'none'}};">
     <view class="album-container">
-        <view class="item-group" wx:for="{{layoutList}}" wx:for-item="group">
-            <block wx:for="{{group}}" wx:for-item="item" wx:for-index="idx">
-                <block wx:if="{{item}}">
+        <view class="item-group" wx:for="{{layoutList}}" wx:for-item="group" wx:key="idx">
+            <block wx:for="{{group}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+                <block wx:if="{{item}}"  wx:key="idx">
                     <image id="{{idx}}" bindtap="mark" class="album-item" src="{{item}}" mode="aspectFill"></image>
                 </block>
                 <block wx:else>
@@ -12,7 +12,7 @@
         </view>
     </view>
     <view class="upload-image" bindtap="chooseImage">
-        <image src="../../../images/camera.png" mode="aspectFit"></image>
+        <image src="../../../images/sendpost/camera.png" mode="aspectFit"></image>
         <text>拍照</text>
     </view>
 </scroll-view>
@@ -29,7 +29,7 @@
 </modal>
 
 <swiper class="swiper-container" duration="400" current="{{previewIndex}}" bindtap="leavePreviewMode" style="display: {{previewMode ? 'block' : 'none'}};">
-  <block wx:for="{{albumList}}" wx:for-item="item">
+  <block wx:for="{{albumList}}" wx:for-item="item"  wx:key="idx">
     <swiper-item>
       <image src="{{item}}" mode="aspectFit"></image>
     </swiper-item>

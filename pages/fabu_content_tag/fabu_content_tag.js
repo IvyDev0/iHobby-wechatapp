@@ -53,8 +53,7 @@ Page({
           major[i].ifchoose = false;      
       }
       major[id-1].ifchoose = true;
-      var ins = getApp()
-      ins.data.Majortag = major[id-1].name
+      app.globalData.Majortag = major[id-1].name
       this.setData({
           major: major,
           majorchoose: id
@@ -67,8 +66,8 @@ Page({
           protype[i].ifchoose = false;      
     }
     protype[id-1].ifchoose = true;
-    var ins = getApp()
-    ins.data.Typetag = protype[id-1].name
+    
+    app.globalData.Typetag = protype[id-1].name
 
     this.setData({
         protype: protype,
@@ -78,14 +77,12 @@ Page({
 
   addtag() {
     wx.navigateTo({
-        url: '../addtag/addtag'
+        url: '../fabu_content_tag_add/fabu_content_tag_add'
     })
   },
 
   confirmtag() {
-    var ins = getApp()
-    ins.data.Confirmtag = true
-    console.log(getApp().data.Typetag+' '+getApp().data.Majortag+'  '+ins.data.Confirmtag);
+    app.globalData.Confirmtag = true
     wx.navigateBack({})
   }
 })
