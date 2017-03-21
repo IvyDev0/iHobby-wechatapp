@@ -5,7 +5,7 @@ Page( {
   data: {
     userInfo: {},
     userListInfo: [ {
-      icon: '../../images/wode/yizan.png',
+      icon: '../../images/feed/zan1.png',
       text: '已赞',
 
     }, {
